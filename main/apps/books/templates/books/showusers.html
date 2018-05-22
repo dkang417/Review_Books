@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>User Reviews</title>
+</head>
+<body>
+	<div id="wrapper">
+		<p><a href="/">Home</a></p>
+		<a href="logout">logout</a>
+		<h1>User Name: {{ user.name }}</h1>
+		<p>Email: {{ user.email }}</p>
+		<p>Total Reviews: {{ total_reviews }}</p>
+		<h3>Posted Reviews on the following books:</h3>
+		 {% for book in reviewed_books %} 
+		 
+		 	<p><a href="/books/{{book.book.id}}">{{book.book.title }}</a></p>
+		 	
+		 {% endfor %}
+	
+	</div>
+</body>
+</html>
